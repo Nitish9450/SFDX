@@ -1,0 +1,43 @@
+.circular-bar-container {
+    width: 11%; /* make heigh and width 100% .  Adjust side of progress bar by adjusting size of main container from you want to call this component*/
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-bar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-circle {
+    width: 100%; /* Make SVG responsive to parent */
+    height: 100%; /* Maintain aspect ratio */
+    transform: rotate(-90deg); /* Rotate for proper circular progress */
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 10%;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 10%;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the text */
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #333;
+}

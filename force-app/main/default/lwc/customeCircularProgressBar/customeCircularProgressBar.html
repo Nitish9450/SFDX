@@ -1,0 +1,26 @@
+<template>
+    <div class="circular-bar-container">
+        <div class="circular-bar">
+            <svg viewBox="0 0 36 36" class="progress-circle">
+                <!-- Background Circle -->
+                <circle
+                    class="circle-bg"
+                    cx="18"
+                    cy="18"
+                    r="15.91549431"
+                ></circle>
+
+                <!-- Foreground Circle (Progress) -->
+                <circle
+                    class="circle-progress"
+                    cx="18"
+                    cy="18"
+                    r="15.91549431"
+                    stroke-dasharray="100, 100"
+                    stroke-dashoffset={progressOffset}
+                ></circle>
+            </svg>
+            <div class="progress-text">{progress}%</div>
+        </div>
+    </div>
+</template>
